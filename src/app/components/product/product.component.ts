@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Rating } from 'primeng/rating';
 import { Product } from '../../../types';
@@ -11,4 +11,9 @@ import { Product } from '../../../types';
 })
 export class ProductComponent {
   @Input() product!: Product;
+  @Output() productOutput: EventEmitter<Product> = new EventEmitter<Product>();
+
+  ngOnInit() {
+    this.productOutput.emit(this.product);
+  }
 }
