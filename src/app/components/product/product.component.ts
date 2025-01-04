@@ -7,7 +7,6 @@ import { Product } from '../../../types';
   selector: 'app-product',
   imports: [Rating, FormsModule],
   templateUrl: './product.component.html',
-  styleUrl: './product.component.scss',
 })
 export class ProductComponent {
   @Input() product!: Product;

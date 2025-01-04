@@ -8,7 +8,6 @@ import { HeaderComponent } from './layout/header/header.component';
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'angular-crash-code-deck';

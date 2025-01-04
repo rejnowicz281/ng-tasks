@@ -1,7 +1,13 @@
 <div>
+  <app-product-form-dialog />
+  <p-paginator
+    [rows]="rows"
+    [totalRecords]="totalProducts"
+    (onPageChange)="onPageChange($event)"
+    [rowsPerPageOptions]="[5, 10, 20]"
+  ></p-paginator>
   <app-product
     *ngFor="let product of products"
     [product]="product"
-    (productOutput)="onProductOutput($event)"
   ></app-product>
 </div>

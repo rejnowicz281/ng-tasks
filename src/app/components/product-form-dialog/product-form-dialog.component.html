@@ -1,0 +1,16 @@
+<p-button (click)="showDialog()">Add Product</p-button>
+<p-dialog header="Add Product" [modal]="true" [(visible)]="visible">
+  <label for="name">Name</label>
+  <input id="name" [(ngModel)]="product.name" />
+
+  <label for="price">Price</label>
+  <input id="price" [(ngModel)]="product.price" />
+
+  <label for="image">Image</label>
+  <input id="image" type="file" [(ngModel)]="product.image" />
+
+  <label for="rating">Rating</label>
+  <p-rating id="rating" [(ngModel)]="product.rating" />
+
+  <p-button>Add</p-button>
+</p-dialog>
